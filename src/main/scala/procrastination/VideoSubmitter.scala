@@ -1,4 +1,4 @@
-package scala
+package procrastination
 
 import cakesolutions.kafka.{KafkaProducer, KafkaProducerRecord}
 import org.apache.kafka.common.serialization.{ByteArraySerializer, StringSerializer}
@@ -7,7 +7,7 @@ import org.bytedeco.javacpp.{BytePointer, opencv_imgcodecs}
 import org.bytedeco.javacv.{FFmpegFrameGrabber, OpenCVFrameConverter}
 
 
-class FrameSubmitter(topic: String) {
+class VideoSubmitter(topic: String) {
 
     private val producer = KafkaProducer(
       KafkaProducer.Conf(

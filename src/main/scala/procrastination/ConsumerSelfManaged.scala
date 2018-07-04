@@ -1,4 +1,4 @@
-package scala
+package procrastination
 
 import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, Props}
 import cakesolutions.kafka.KafkaConsumer
@@ -50,7 +50,7 @@ class ConsumerSelfManaged(
     KafkaConsumerActor.props(kafkaConfig, actorConfig, self)
   )
 
-  consumer ! Subscribe.AutoPartition(List("test"))
+  consumer ! Subscribe.AutoPartition(List("test2"))
 
   def receive: Receive = {
 
